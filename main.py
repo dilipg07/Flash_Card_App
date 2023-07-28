@@ -31,11 +31,9 @@ def flip_card():
     canvas.itemconfig(can_back,image=card_back_img)
 
 def is_known():
-    # print(data[key])
     data.pop(key)
     words_to_learn = pd.DataFrame(data)
     words_to_learn.to_csv("Flash Card App\data\words_to_learn.csv",index=False)
-    # print(len(words_to_learn))
     generate_random_word()
 window = Tk()
 window.title("Flash Cards")
